@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+  <div class="auth-container">
+    <button id="closeLogin" class="close-login">✖</button>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="email" id="email" name="loginEmail" placeholder="Correo electrónico" autocomplete="email" required />
+      <input type="password" id="password" name="loginPassword" placeholder="Contraseña" autocomplete="current-password"
+        required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="register.html" class="auth-link">Regístrate</a></p>
+  </div>
+  <div id="notificacion" class="notificacion" style="display:none;">
+  </div>
+  <script type="module" src="../js/firebaseConfig.js"></script>
+  <script type="module" src="../js/auth/auth.js"></script>
+  <script type="module" src="../js/auth/login.js"></script>
+  <script type="module" src="../js/chat/ui.js"></script>
+</body>
+</html>

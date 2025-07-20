@@ -1,0 +1,153 @@
+/*  RESET Y VARIABLES  */
+:root {
+  --primary-color: #4361ee;
+  --primary-dark: #3a56d4;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #343a40;
+  --text-color: #2b2d42;
+  --error-color: #ef233c;
+  --success-color: #2ec4b6;
+
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/*  BODY GENERAL  */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*  CONTENEDOR DE LOGIN / REGISTRO  */
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 5rem;
+  position: relative;
+}
+
+/*  INPUTS Y BOTONES */
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* LINKS */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/*  TEXTOS  */
+p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* BOTÓN CERRAR LOGIN / REGISTRO */
+.close-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  padding: 1rem 1rem;
+  font-size: 20px;
+  color: #ff4d4d;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.close-login:hover {
+  color: #ff0000;
+}
+
+/* === MENSAJE DE ERROR EN REGISTRO === */
+#errorMensaje {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+/*  NOTIFICACIÓN GENÉRICA  */
+.notificacion {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  animation: fadeInOut 3s ease forwards;
+}
+
+.notificacion.error {
+  background-color: #e53935;
+}
+
+/*  ANIMACIÓN DE NOTIFICACIÓN  */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}

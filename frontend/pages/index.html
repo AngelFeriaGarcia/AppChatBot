@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jexi Chatbot</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/estilochat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="topbar">
+    <button id="topbarToggleSidebar" class="topbar-menu-btn" title="Mostrar menú">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="mensajeBienvenida" class="mensaje-bienvenida" style="display: none;">
+      Bienvenido, gracias por iniciar sesión
+    </div>
+    <div class="user-container">
+      <button id="userIcon" class="user-btn"><i class="fas fa-user-circle"></i></button>
+      <div id="userDropdown" class="user-dropdown" style="display: none;">
+        <div id="notLoggedInOptions">
+          <button id="btnLogin" class="dropdown-btn"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+          <button id="btnRegister" class="dropdown-btn"><i class="fas fa-user-plus"></i> Registrarse</button>
+        </div>
+        <div id="loggedInOptions" style="display:none;">
+          <span id="nombreUsuario">Usuario</span>
+          <button id="cerrarSesion" class="dropdown-btn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú lateral -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fas fa-bars"></i> MENÚ</h3>
+      <button id="toggleSidebar" class="menu-btn" title="Ocultar menú">
+        <i class="fas fa-angle-double-left"></i>
+      </button>
+    </div>
+    <div class="sidebar-content">
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="#" id="nuevoChat" class="nav-link">
+              <i class="fas fa-plus-circle"></i>
+              <span>Nuevo Chat</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div id="historial" class="historial-container">
+        <h4><i class="fas fa-clock-rotate-left"></i> Historial Reciente</h4>
+        <div class="historial-list"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Área del chat -->
+  <main class="chat-container">
+    <div class="chat-header">
+      <h1>Hola soy Jexi, ¿con qué te puedo ayudar?</h1>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input-container">
+      <div class="input-wrapper">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+        <button id="sendButton" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </main>
+  <!-- Modal Editar Título -->
+  <div id="modalEditar" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Editar nombre del chat</h3>
+      <input type="text" id="nuevoTituloInput" placeholder="Introduce un nuevo nombre">
+      <div class="modal-actions">
+        <button id="confirmEditBtn">Aceptar</button>
+        <button id="cancelEditBtn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Eliminar Conversación -->
+  <div id="modalEliminar" class="modal" style="display: none;">
+    <div class="modal-content eliminar">
+      <h3>¿Eliminar esta conversación?</h3>
+      <p>No podrás volver a ver esta conversación.</p>
+      <div class="modal-actions">
+        <button id="confirmDeleteBtn">Eliminar</button>
+        <button id="cancelDeleteBtn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <div id="notificacion" class="notificacion"></div>
+
+  <!--Script SDK Firebase-->
+  <script type="module" src="../js/firebaseConfig.js"></script>
+  <!-- Chat API y UI -->
+  <script type="module" src="../js/chat/api.js"></script>
+  <script type="module" src="../js/chat/ui.js"></script>
+  <!-- Autentificación -->
+  <script type="module" src="../js/auth/auth.js"></script>
+  <!-- Verificación de estado de sesión -->
+  <script type="module"></script>
+  <!-- Librerías -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
