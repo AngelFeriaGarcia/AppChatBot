@@ -3,7 +3,7 @@
 ¡Bienvenido/a a **Jexi Chatbot**!  
 Una aplicación web avanzada construida con **Firebase**, **Node.js**, **MySQL** y **Gemini Pro**, que permite a los usuarios mantener conversaciones inteligentes, guardar sus chats, autenticarse de forma segura y mucho más.
 
-![Interfaz principal](assets/chat_ui.png)
+![Interfaz principal](frontend/assets/interfazprincipal.png)
 
 ---
 
@@ -32,25 +32,25 @@ Una aplicación web avanzada construida con **Firebase**, **Node.js**, **MySQL**
 <details>
 <summary><strong>Interfaz de conversación</strong></summary>
 
-![Modo anónimo](assets/chatanonimo.PNG.png)
-![Modo usuario logeado](assets/chatlogeado.png)
+![Modo anónimo](frontend/assets/chatanonimo.png)
+![Modo usuario logeado](frontend/assets/chatlogeado.png)
 
-![Menú plegado](assets/menuplegado.png)
+![Menú plegado](frontend/assets/menuplegado.png)
 
 </details>
 
 <details>
 <summary><strong>Autenticación</strong></summary>
 
-![Login](assets/iniciosesion.png)  
-![Registro](assets/registro.png)
+![Login](frontend/assets/iniciosesion.png)  
+![Registro](frontend/assets/registro.png)
 
 </details>
 
 <details>
 <summary><strong>Historial de chats</strong></summary>
 
-![Historial](assets/historial.png)
+![Historial](frontend/assets/historialmensajes.png)
 
 </details>
 
