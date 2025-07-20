@@ -106,7 +106,7 @@ Una aplicación web avanzada construida con **Firebase**, **Node.js**, **MySQL**
 </details>
 
 <details>
-<summary><strong>📡 Firebase Realtime Database</strong></summary>
+<summary><strong>Firebase Realtime Database</strong></summary>
 
 - Alternativa de guardado por UID en la rama `/conversaciones/`.
 - Datos del usuario accesibles y configurables desde `/users/`.
